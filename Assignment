@@ -1,0 +1,269 @@
+ HTML Questions:
+Q.1 <!DOCTYPE html> is it a tag of html? If not, what is it and why do we use it? 
+Answer >> Its not a tag of HTML,Doctype just defines that it html to the browser.
+
+Q.2 Explain Semantic tags in html? And why do we need it?
+Answer >> A semantic element describes its meaning to both the browser and the developer.
+Examples of non-semantic elements: <div> and <span> =>its nothing about the content.
+Examples of semantic elements: <form> , <table> , and <article> - Clearly defines its content like it a form
+
+Q.3 Differentiate between HTML Tags and Elements? (2 Marks)
+Answer >> HTML tag has opening and closing tag and along with the content we write the tag is called element
+means : <P></P> =>> this is HTML tag
+<P>Avinabh</P> >> with content it Element
+
+Q.4 Build Your Resume using HTML only (5 Marks)
+Q.5 Write Html code so that it looks like the given image Link (5 Marks)
+
+Q.6 What are some of the advantages of HTML5 over its previous versions? (2 Mark) Answer >> 1> Its compatible with all browser.
+2> its support clients and server side also
+3> it has semantic tag
+
+Q.7 Create a simple Music player using html only (5 Marks)
+inside
+Q.8 What is the difference between <figure> tag and <img> tag? (1 Marks)
+Answer >> Img tag is use for insert the image on website where as figure tag is use to organise the image.
+
+Q.9 What’s the difference between html tag and attribute and give example of some global attributes? (2 Marks)
+Answer> html tag is used to format and display the web app, tags are basically two type 1> opening only 2> opening and closing
+attribute basically provide the additional info about the element example of some global attributes:like > class, title, id etc
+
+Q.10 build Table which looks like the given image Link (5 Marks) 
+============================================================================= 
+CSS Questions:
+Q.1 Whats Box Model in CSS & Which CSS Properties are part of it ?
+Answer: Box model we use when we have to style out website, CSS properties are border, margin, padding etc
+
+Q.2 What are the Different Types of Selectors in CSS & what are the advantages of them? (2 Marks) 
+Answer: CSS selector are used to find the html element we want to style, we can use ID,universal selector or class.
+We can style specific element we want to style and its easy to use and for the code readability purpose.
+
+ Q.3 What is VW/VH & How its different from PX? (2 Marks)
+Q.4 Whats difference between Inline, Inline Block and block ? (3 Marks)
+Q.5 How is Border-box different from Content Box? (2 Marks)
+
+Q.6 What’s z-index and How does it Function ? (2 Marks)
+Answer: its define that the order of overlapping html elements.
+
+Q.6 What’s Grid & Flex and difference between them? (5 Marks)
+Answer: Flex is it will only design row or coloulm, however grid design row and colour same time.
+
+Q.7 Difference between absolute and relative and sticky and fixed position explain with example. (5 Marks)
+Q.8 Build Periodic Table as shown in the below image (10 Marks)
+Q. 9 Build given layout using grid or flex see below image for reference . (5 Marks)
+Q.10 Build Responsive Layout both desktop and mobile and Tablet, see below image for reference ? (10 Marks)
+Q.11 Build Complete Homepage of Ineuron ( Link ) with responsiveness. (10 Marks)
+Q.12 What are Pseudo class in CSS & How its different From Pseudo Elements? (2 Marks) 
+================================================================================ =====
+Javascript Questions:
+Q.1 What is Hoisting in Javascript ?
+Answer >>Hoisting helps us extract values of variable,function even before initialising them, and this happens due to the memory creation.the 1st phase of execution context.
+//
+getName();
+console.log(x)
+var x = 7;
+function getName(){
+console.log("hello avinabh"); }
+//
+In above code output will be below:
+>> hello avinabh
+>> undefined
+Note: a variable can be used before it has been declared
+Ex: we can call function before it has been declared
+We can invoke the function before initialising the function.
+Q.2 What are different higher order functions in JS? What is the difference between .map() and .forEach() ?
+
+ Answer >> function which takes another function as argument or returns a function from it, is known as higher order function.
+Some popular Higher order functions are:
+map() , filter() and reduce()
+Map function returns a new array where as forEach does not return new array
+Map we can use when we need to modify the element where as forEach works to loop over the array 
+
+Q.3 What is the difference between .call() .apply() and .bind()? explain with an example
+Answer >>
+// this is basically call method
+// let name1= {
+// firstname:"avinabh",
+// lastname:"kumar",
+// // printfullname:function(){
+// // console.log(this.firstname+ "" + this.lastname)
+// //}
+// }
+// let printfullname= function(hometown,state){
+// console.log(this.firstname + " " + this.lastname+ " from " +hometown +" " + state)
+// }
+// printfullname.call(name1,"jamshedpur","jahrkahnd")
+// let name2= {
+// firstname:"sachin",
+// last:"techndulkar",
+// }
+// function borrow
+// printfullname.call(name2,"kolkata","kolkata") //apply()
+// now lets talk about apply method
+// here we call the argument in array list this is simple let name1= {
+firstname:"avinabh", lastname:"kumar",
+// printfullname:function(){
+// console.log(this.firstname+ "" + this.lastname) // }
+}
+let printfullname= function(hometown,state){
+console.log(this.firstname + " " + this.lastname+ " from " +hometown +" " + state) }
+printfullname.apply(name1,["jamshedpur","jahrkahnd"]) let name2= {
+firstname:"sachin",
+last:"techndulkar", }
+printfullname.apply(name2,["kolkata","kolkata"])
+//bind method
+// kind of similer to call method this will give copy of function we can invoke later let test= printfullname.bind(name2,"kolkata","kolkata")
+test()
+
+ Q.4 Explain Event bubbling and Event Capturing in JavaScript with suitable examples (2 Marks) 
+ 
+ Q.5 What is function currying with example? (2 Marks)
+Answer >> We can achieve function currying using bind method and closure Below is the example with closure:
+let multyply4 = function(x){
+return function(y){ console.log(x*y)
+} }
+let test= multyply4(2) test(3)
+let test1= multyply4(3) test1(4)
+
+Q.6 Explain execution context diagram of following code snippets, use white board to draw execution context diagram (4 Marks)
+Code:1
+console.log('First');
+setTimeout(() => console.log('Second'), 0); console.log('Third');
+Output below:
+First
+Third
+Second
+Because settimeout is async operation
+Code:2 console.log('First'); function secondCall() {
+console.log('Second'); }
+setTimeout(secondCall, 2000);
+setTimeout(() => console.log('Third'), 0);
+console.log('Third')
+Output below:
+First
+Third
+Third
+After 2 sec
+Second
+
+Q.7 What are promises? What are the different states of a promise? Support your answer with an example where you need to create your own promise. (2 Marks )
+Answer:we use promise to do async task in javascript, promise has three state basically a)pending ,b)fulfilled c)rejected
+
+Q.8 What is ‘this’ keyword in JavaScript? explain with an example & create (4 Marks)
+Answer: this refers to the current object we are pointing.
+
+Q.9 Explain event loop Call Stack Callback queue and Micro Task queue in Your Words (2 Marks) 
+Answer: Event loop basically monitor the call stack and callback queue (micro task queue) Once call stack empty its send the async task to call stack.
+
+Q.10 Explain Debouncing and Create a project where you are using Debouncing (5 Marks)
+
+ Answer: the way to optimise the search API call is called Debouncing.we can use this to reduce the api call on every key press on search.
+Q.11 Explain Closures and Use cases of Closures (2 Marks)
+Meaning A closure is a function that has access to its outer function scope even after the function has returned.
+function x(){ var a=7;
+function y(){ console.log(a);
+}
+return y; }
+var z= x();
+//console.log(z);
+z();
+>> it will give output 7
+>> Closures used in High order function
+
+Q.12 Create a Blog web app using JavaScript (10 Marks)
+- Fetch data from https://jsonplaceholder.typicode.com/posts and show it to ui - User can also add new blog
+- Add Delete functionality also
+
+================================================================================ =========
+React Questions:
+
+Q.1 What’s React and What are the advantages of it? (1 Marks)
+Answer : React is javascript Library, the main focus is building UI as fast as possible,
+this is used for single page application,Means complete website in single page.
+
+Q.2 What's Virtual Dom in React & What are the advantages of it? (2 Marks)
+Answer: Virtual Dom is actual representation of real DOM,React use virtual Dom to compare the change element with real DOM.
+The main advantage is only specific changed component will get rendered and not the whole web page, This makes our Web app very fast and good experience to the Client side.
+
+Q.3 Explain LifeCycle of React Components? (1 Marks) 
+In React there is 3 LifeCycle phase,Kindly see the below: 
+A) mounting
+B) updating
+C) unmounting
+
+Q.4 Whats the difference between between Functional Components and Class Components? (1 Marks) 
+Answer: Functional component is not but a simple javascript function which takes props and display on browser and it uses hooks to achieve the React life cycle method,
+Where as in class based component we need to extend it from react and it uses constructor to store the state.
+
+Q.5 What are the hooks in React & Can we use Hooks in Class Components? (2 Marks)
+Answer: hooks we use in function component to achieve the life cycle method, we don’t use any hook inside class component,
+
+ Here are the hooks I have used so far> Usestate, Useeffect, use memo, usecallback, useref,usecontext,useReducer
+ 
+Q.6 What are the LifeCycle method and the advantages of it? (2 Marks) 
+A) mounting >> component born
+B) updating >> component grow
+C) unmounting >> component dies
+
+Q.7 What’s useState Hook & Advantages of it? (2 Marks)
+Answer: useState is a hook which use in function component to declare a variable and incase later on we want to update we can achieve this by this hook,
+Also react keeps track of it.
+
+Q.8 Explain useEffect & Advantages of it (2 Marks)
+useEffect hooks we use when we have to call any api and we want to run this only once before render method,
+We can also write dependency inside useEffect so when the state changes our useEffect will run.
+
+Q.9 Explain Context Api and create a minor project on it (5 Marks)
+- Create dashboard and with button on clicking on that change theme to dark and light
+
+Q.10 Explain useReducer and Its advantages. (2 Marks)
+Answer: it allows us to manage complex state changes in centralized place. We can define all of our state updates and actions in the reducer() function so that it can update
+The slice of the store.
+
+Note >> Q.11 build a Todo Web App Using React and useReducer Hook. (5 Marks) note>> Q.12 Build A simple counter app using React (4 Marks)
+note>> Q.13 Build Calculator Using React Only (4 Marks)
+note>> Q.14 Build a Tic Tac Toe Game using Class Component of React (5 Marks) 
+
+Q.15 Explain Prop Drilling & How can we avoid it? (2 Marks)
+Answer: when we have to sent the data from parent to child and inside child there could be many child,
+it will go through each component to reach the target child component, this process is called prop drilling.
+To avoid prop drilling we can use context api and create a centralise store or we can also use 3rd party package called redux to among the state, redux used for large scale web app.
+
+Q.16 Create a task manager where user can create tasks and see his task (10 Marks)
+● - Redirect him to task dashboard section after login
+● - Use https://reqres.in/ api to authenticate user and redirect him to task manager
+dashboard where he can see his task and create.
+================================================================================ =============
+Express Questions:
+
+ ● Q.1 Create a simple server using Express and connect with backend and create an endpoint “/post” which sends 20 posts (3 Marks)
+●
+Q.2 Explain a middleware and create a middleware that checks is user authenticated or not then send data of post (4 Marks)
+●
+Q.3 Create a backend for blog app, where user can perform crud operations (10 Marks)
+● - Add blog
+● - Delete blog
+● - Update blog
+● - Replace blog ●
+●
+● Q.4 What is the difference between authentication and authorization? (2 Marks)
+Answer >> authentication basically checks whether user is valid or note where as authorization means user has what all permission to access on web app
+Example : for normal user admin dashboard will not be visible, only admin can access it.
+● ● ●
+● ●
+● ● ●
+Q.5 What is he difference between common JS and EJS module? (2 Marks) Common js execute the code synchronously where as EJS provide as to run the code Asynchronous
+To install any library in common js we use require where as in EJS we use import and export.
+
+Q.6 What is JWT and what we can achieve with that create a minor project with jwt (5 Marks)
+- Login and sign up
+- Add authentication using jwt
+
+Q.7 What should we do with the password of a user before storing it into DB? (2 Marks) Answer >> First we should encrypt the password before storing into the DB.We can use third
+party package called Bcrypt.
+
+● Q.8 Whats event loop in NodeJS (2 Marks)
+● Event loop basically monitor the call stack and callback queue (micro task queue)
+● Once call stack empty its send the async task to call stack. ●
+
+Q.9 Create a Full Stack Ecommerce website with all major functionalities. (20 Marks)
